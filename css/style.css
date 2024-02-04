@@ -44,7 +44,16 @@ body {
 }
 
 main {
-    margin: 0 auto;;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.restart {
+    margin-top: 10px;
+}
+
+.info {
+    margin-top: 10px;
 }
 
 .container {
