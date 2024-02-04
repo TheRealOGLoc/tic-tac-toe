@@ -1,0 +1,62 @@
+body {
+    box-sizing: border-box;
+}
+
+.item {
+    margin: 5px;
+    border: 1px solid black;
+}
+
+#item-1 {
+    grid-area: top-0 ;
+}
+
+#item-2 {
+    grid-area: top-1 ;
+}
+
+#item-3 {
+    grid-area: top-2 ;
+}
+
+#item-4 {
+    grid-area: mid-0 ;
+}
+
+#item-5 {
+    grid-area: mid-1 ;
+}
+
+#item-6 {
+    grid-area: mid-2 ;
+}
+
+#item-7 {
+    grid-area: btm-0 ;
+}
+
+#item-8 {
+    grid-area: btm-1 ;
+}
+
+#item-9 {
+    grid-area: btm-2 ;
+}
+
+main {
+    margin: 0 auto;;
+}
+
+.container {
+    background-color: yellow;
+    width: 150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-areas: 
+        "top-0 top-1 top-2"
+        "mid-0 mid-1 mid-2"
+        "btm-0 btm-1 btm-2";
+}
+
