@@ -6,7 +6,7 @@ const chess = {
 
 /*----- state variables -----*/
 const state = {
-    currentPlayer: 1,
+    currentPlayer: "X",
     winner: null,
     tie: false,
     board: ["", "", "", "", "", "", "", "", ""]
@@ -28,7 +28,7 @@ for (let i = 0; i < container.children.length; i++) {
 /*----- functions -----*/
 function init() {
     resetCell();
-    state.currentPlayer = 1;
+    state.currentPlayer = "X";
     state.winner = null;
     state.tie = false;
     resetInfo();
@@ -40,7 +40,7 @@ function selectChess(evt) {
         evt.preventDefault();
         const cell = evt.target;
         if (state.board[Number(cell.id[5]) - 1] === "") {
-            if (state.currentPlayer === 1) {
+            if (state.currentPlayer === "X") {
                 state.board[Number(cell.id[5]) - 1] = chess.x;
             } else {
                 state.board[Number(cell.id[5]) - 1] = chess.o;
@@ -84,11 +84,11 @@ function resetCell() {
 }
 
 function changeCurrentPlayer() {
-    if (state.winner === null) {
-        if (state.currentPlayer === 1) {
-            state.currentPlayer = 2;
+    if (state.winner === null && state.tie === false) {
+        if (state.currentPlayer === "X") {
+            state.currentPlayer = "O";
         } else {
-            state.currentPlayer = 1;
+            state.currentPlayer = "X";
         }
     }
 }

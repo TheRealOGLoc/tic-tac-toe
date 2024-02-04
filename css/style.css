@@ -4,7 +4,10 @@ body {
 
 .item {
     margin: 5px;
+    display: flex;
     border: 1px solid black;
+    justify-content: center;
+    align-items: center;
 }
 
 #item-1 {
